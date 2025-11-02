@@ -101,7 +101,8 @@ def main():
     # Try to connect to the database 10 times
     while attempt < total_attempts:
         try:
-            data_loader = DataLoader("neo4j://localhost:7687", "neo4j", "enter pwd here")
+            # TODO: Replace "YOUR_NEO4J_PASSWORD" with your actual Neo4j database password
+            data_loader = DataLoader("neo4j://localhost:7687", "neo4j", "YOUR_NEO4J_PASSWORD")
             data_loader.load_transform_file("yellow_tripdata_2022-03.parquet")
             data_loader.close()
             

@@ -57,7 +57,8 @@ def test_page_rank(max_iter, prop_name):
     """
 
 
-    conn = interface.Interface("neo4j://localhost:7687", "neo4j", "enter your pwd here")
+    # TODO: Replace "YOUR_NEO4J_PASSWORD" with your actual Neo4j database password
+    conn = interface.Interface("neo4j://localhost:7687", "neo4j", "YOUR_NEO4J_PASSWORD")
     result = conn.pagerank(max_iter, prop_name)
 
     return result
@@ -72,7 +73,8 @@ def test_bfs(start_node, last_node):
 
     print("Testing if BFS is working")
 
-    conn = interface.Interface("neo4j://localhost:7687", "neo4j", "enter your pwd here")
+    # TODO: Replace "YOUR_NEO4J_PASSWORD" with your actual Neo4j database password
+    conn = interface.Interface("neo4j://localhost:7687", "neo4j", "YOUR_NEO4J_PASSWORD")
     result = conn.bfs(start_node, last_node)
 
     return result
@@ -97,7 +99,8 @@ def main():
     print("----------------------------------")
 
     # Test load data
-    tester = TesterConnect("neo4j://localhost:7687", "neo4j", "enter your pwd here")
+    # TODO: Replace "YOUR_NEO4J_PASSWORD" with your actual Neo4j database password
+    tester = TesterConnect("neo4j://localhost:7687", "neo4j", "YOUR_NEO4J_PASSWORD")
     tester.test_data_loaded()
     tester.close()
 

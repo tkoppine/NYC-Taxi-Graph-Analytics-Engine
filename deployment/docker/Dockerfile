@@ -24,7 +24,8 @@ WORKDIR /cse511
 RUN wget -O yellow_tripdata_2022-03.parquet https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2022-03.parquet
 
 # Extracting the data_loader.py file from git hub to /cse511 (directory)
-RUN git clone https://accesstokenkey@github.com/yourpath.git 
+# TODO: Replace with your actual GitHub repository URL and access token
+RUN git clone https://YOUR_ACCESS_TOKEN@github.com/YOUR_USERNAME/YOUR_REPO.git 
 
 # First upgrade pip and later downloading neo4j pandas pyarrow
 RUN python3 -m pip install --upgrade pip && \
@@ -41,7 +42,8 @@ RUN echo "dbms.default_listen_address=0.0.0.0" >> /etc/neo4j/neo4j.conf && \
     echo "dbms.security.procedures.allowlist=gds.*" >> /etc/neo4j/neo4j.conf
 
 # Setting the default password for neo4j db
-RUN neo4j-admin dbms set-initial-password enter your pwd here
+# TODO: Replace "YOUR_NEO4J_PASSWORD" with your desired Neo4j database password
+RUN neo4j-admin dbms set-initial-password YOUR_NEO4J_PASSWORD
 
 # Run the data loader script
 RUN chmod +x Project-1-tkoppine/data_loader.py && \

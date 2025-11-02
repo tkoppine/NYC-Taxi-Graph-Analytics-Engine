@@ -1,5 +1,12 @@
 # API Documentation
 
+## Environment Configuration
+
+⚠️ **Important**: Before using the API, make sure to update all password placeholders:
+
+- Replace `YOUR_NEO4J_PASSWORD` with your actual Neo4j database password in all files
+- Update environment variables in `.env` file (copy from `.env.example`)
+
 ## DataLoader Class
 
 ### Overview

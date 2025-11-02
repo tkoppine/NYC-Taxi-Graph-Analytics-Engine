@@ -78,11 +78,28 @@ NYC-Taxi-Graph-Analytics-Engine/
    ```
 
 3. **Set up Neo4j**
+
    - Install Neo4j 5.5.0
    - Install Graph Data Science plugin
    - Configure authentication
 
+4. **Configure environment variables**
+
+   ```bash
+   cp .env.example .env
+   # Edit .env file and replace YOUR_NEO4J_PASSWORD with your actual Neo4j password
+   ```
+
+5. **Update password in source files**
+   - Replace `YOUR_NEO4J_PASSWORD` in `src/data_loader.py`
+   - Replace `YOUR_NEO4J_PASSWORD` in `tests/tester.py`
+
 ### Docker Deployment
+
+⚠️ **Before deploying, update the following:**
+
+- Replace `YOUR_NEO4J_PASSWORD` in `deployment/docker/Dockerfile`
+- Replace `YOUR_ACCESS_TOKEN@github.com/YOUR_USERNAME/YOUR_REPO.git` with your repository details
 
 1. **Build the container**
 
@@ -97,6 +114,10 @@ NYC-Taxi-Graph-Analytics-Engine/
    ```
 
 ### Kubernetes Deployment
+
+⚠️ **Before deploying, update the following:**
+
+- Replace `YOUR_NEO4J_PASSWORD` in `deployment/kubernetes/neo4j-values.yaml`
 
 1. **Deploy infrastructure components**
 

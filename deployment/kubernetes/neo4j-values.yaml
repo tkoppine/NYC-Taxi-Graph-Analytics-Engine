@@ -5,7 +5,8 @@ neo4j:
     cpu: "1"
     memory: "2Gi"
   #assign password for neo4j
-  password: "enter your pwd here"
+  # TODO: Replace "YOUR_NEO4J_PASSWORD" with your desired Neo4j database password
+  password: "YOUR_NEO4J_PASSWORD"
 
 #assign environment variables neo4j plugins as graph-data-science
 env:

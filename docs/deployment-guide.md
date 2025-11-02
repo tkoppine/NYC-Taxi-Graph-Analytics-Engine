@@ -1,5 +1,11 @@
 # Deployment Guide
 
+⚠️ **Configuration Required**: Before deploying, you must update all password and repository placeholders:
+
+- Replace `YOUR_NEO4J_PASSWORD` with your desired Neo4j password
+- Replace `YOUR_ACCESS_TOKEN@github.com/YOUR_USERNAME/YOUR_REPO.git` with your repository URL
+- Update all configuration files as detailed below
+
 ## Docker Deployment
 
 ### Prerequisites
